@@ -10,3 +10,15 @@ C:\GitHubProjects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.exe
 C:\GitHubProjects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.pdb
 C:\GitHubProjects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Form2.resources
 C:\GitHubProjects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Form3.resources
+C:\GitHub Projects\Vecokenska-aplikacija\bin\Debug\vecokenska aplikacija.exe.config
+C:\GitHub Projects\Vecokenska-aplikacija\bin\Debug\vecokenska aplikacija.exe
+C:\GitHub Projects\Vecokenska-aplikacija\bin\Debug\vecokenska aplikacija.pdb
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.csproj.AssemblyReference.cache
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Form1.resources
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Form2.resources
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Form3.resources
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska_aplikacija.Properties.Resources.resources
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.csproj.GenerateResource.cache
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.csproj.CoreCompileInputs.cache
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.exe
+C:\GitHub Projects\Vecokenska-aplikacija\obj\Debug\vecokenska aplikacija.pdb
