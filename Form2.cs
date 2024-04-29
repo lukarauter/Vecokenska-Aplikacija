@@ -13,12 +13,25 @@ namespace vecokenska_aplikacija
 {
     public partial class Form2 : Form
     {
-        public DataGridView DataGridViewReference { get; set; }
+        private DataGridView dataGridView1;
+        public DataGridView DataGridViewReference
+        {
+            get { return dataGridView1; }
+            set
+            {
+                dataGridView1 = value; // Assign the provided DataGridView to dataGridView1
+                if (dataGridView1 != null)
+                {
+                    dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
+                }
+            }
+        }
 
         public Form2()
         {
 
             InitializeComponent();
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -31,6 +44,7 @@ namespace vecokenska_aplikacija
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (ValidateTextBoxes())
@@ -39,6 +53,19 @@ namespace vecokenska_aplikacija
                 DataGridViewReference.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
             }
 
+        }
+
+        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            // Update the text boxes with data from the selected row
+            if (DataGridViewReference.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = DataGridViewReference.SelectedRows[0];
+                textBox1.Text = selectedRow.Cells["Column1"].Value?.ToString();
+                textBox2.Text = selectedRow.Cells["Column2"].Value?.ToString();
+                textBox3.Text = selectedRow.Cells["Column3"].Value?.ToString();
+                textBox4.Text = selectedRow.Cells["Column4"].Value?.ToString();
+            }
         }
 
         private bool ValidateTextBoxes()
@@ -121,6 +148,10 @@ namespace vecokenska_aplikacija
 
         }
 
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

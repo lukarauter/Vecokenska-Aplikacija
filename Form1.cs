@@ -31,7 +31,6 @@ namespace vecokenska_aplikacija
             Form2 form2 = new Form2();
             form2.DataGridViewReference = dataGridView1;
             form2.Show();
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -39,21 +38,20 @@ namespace vecokenska_aplikacija
             Form2 form2 = new Form2();
             form2.DataGridViewReference = dataGridView1;
             form2.Show();
-
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            
+
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
-            
+
             if (dataGridView1.Rows.Count > 0)
             {
-                
+
                 DialogResult result = MessageBox.Show("Želite izbrisati ta vnos?", "Izbris", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                
+
                 if (result == DialogResult.Yes)
                 {
                     dataGridView1.Rows.RemoveAt(rowIndex);
@@ -99,11 +97,11 @@ namespace vecokenska_aplikacija
 
         private void SaveDataToXml(string fileName)
         {
-            
+
             if (dataGridView1.Rows.Count > 0)
             {
                 List<RowData> dataList = new List<RowData>();
-               
+
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     RowData data = new RowData
@@ -116,7 +114,7 @@ namespace vecokenska_aplikacija
                     dataList.Add(data);
                 }
 
-            
+
                 XmlSerializer serializer = new XmlSerializer(typeof(List<RowData>));
                 using (StreamWriter writer = new StreamWriter(fileName))
                 {
@@ -136,16 +134,16 @@ namespace vecokenska_aplikacija
             {
 
                 {
-                    
+
                     XmlSerializer serializer = new XmlSerializer(typeof(List<RowData>));
                     using (StreamReader reader = new StreamReader(fileName))
                     {
                         List<RowData> dataList = (List<RowData>)serializer.Deserialize(reader);
 
-                        
+
                         dataGridView1.Rows.Clear();
 
-                        
+
                         foreach (RowData data in dataList)
                         {
                             dataGridView1.Rows.Add(data.Lastnost1, data.Lastnost2, data.Lastnost3, data.Lastnost4);
@@ -162,4 +160,4 @@ namespace vecokenska_aplikacija
 
 
 
-    
+
